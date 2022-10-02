@@ -10,6 +10,14 @@ The `srv` folder off the root of the file system should contain multiple Prolog 
 
 Prolog initialisation file `init.pl` lives in `/root/.config/swi-prolog`. The image copies a default source.
 
+## Example
+
+Pull and run an interactive SWI-Prolog on Alpine using Docker:
+```bash
+docker run --rm -it ghcr.io/proganon/srvpl:v1.0.0 -g check_installation
+```
+The `-g` argument adds a program start-up goal to run the built-in [installation checker](https://www.swi-prolog.org/pldoc/doc/_SWI_/library/check_installation.pl). Results appear on the console before Prolog launches its top-level [interactive goal](https://www.swi-prolog.org/pldoc/doc_for?object=prolog/0).
+
 ## Deriving an Image
 
 Copy service-oriented sources to the current directory, or `srv` by default. Also copy `init.pl` to root's configuration directory, as follows.
