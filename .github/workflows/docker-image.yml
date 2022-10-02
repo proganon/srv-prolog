@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag srv-prolog:$(date +%s)
+      run: docker build . --file Dockerfile --tag srvpl:$(date +%s)
